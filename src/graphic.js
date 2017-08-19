@@ -1,3 +1,7 @@
-function draw() {
-	log('world');
-}
+define('graphic', [], function() {
+	return {
+		hello: function() {
+			console.log('graphic - hello');
+		}
+	}
+});

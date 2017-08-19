@@ -1,10 +1,12 @@
-function main() {
-	log('hello');
-	draw();
-}
+window.addEventListener('load', function() {
 
-var temp = 'temp';
-log(temp);
-err(temp);
+	define('main', ['graphic', 'input'], function(graphic, input) {
+		function start() {
+			graphic.hello();
+			input.hello();
+		}
 
-win.addEventListener('load', main);
+		start();
+	});
+
+});
