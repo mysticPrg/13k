@@ -1,7 +1,7 @@
-define('graphic', [], function() {
+define('Graphic', [], function() {
 	return {
 		hello: function() {
-			console.log('graphic - hello');
+			console.log('Graphic - hello');
 		}
 	}
 });

@@ -1,8 +1,7 @@
-define('input', ['graphic'], function() {
-
+define('Input', [], function() {
 	return {
 		hello: function() {
-			console.log('input - hello');
+			console.log('Input - hello');
 		}
 	}
 });

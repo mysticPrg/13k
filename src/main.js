@@ -1,9 +1,9 @@
 window.addEventListener('load', function() {
 
-	define('main', ['graphic', 'input'], function(graphic, input) {
+	define('Main', ['Graphic', 'Input'], function(Graphic, Input) {
 		function start() {
-			graphic.hello();
-			input.hello();
+			Graphic.hello();
+			Input.hello();
 		}
 
 		start();
