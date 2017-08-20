@@ -40,18 +40,20 @@ const path = {
 
 	etc: {
 		header: './src/header.js',
+		module: './src/module.js',
 		footer: './src/footer.js'
 	}
 };
 
 gulp.task('buildJS', () => {
 	const header = fs.readFileSync(path.etc.header, 'utf8');
+	const module = fs.readFileSync(path.etc.module, 'utf8');
 	const footer = fs.readFileSync(path.etc.footer, 'utf8');
 
 	return gulp.src(path.src.js)
 		.pipe(sourcemaps.init())
 			.pipe(concat(path.dest.js.normal))
-			.pipe(concat.header(header))
+			.pipe(concat.header(header + module))
 			.pipe(concat.footer(footer))
 			.pipe(gulp.dest(path.dest.dir))
 			.pipe(uglify())
